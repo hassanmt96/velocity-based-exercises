@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { Data } from '../Data';
 import {
-    Table, TableContainer, TableBody, TableCell, TableHead, TableRow, Paper, Container, Typography
+  Table, TableContainer, TableBody, TableCell, TableHead, TableRow, Paper, Container, Typography
 } from "@mui/material"
 
 const WorkoutTable = ({ day, velocityRange, velocityName }) => {
 
-    const [mainLift, setMainLift] = useState("");
-    const [exercises, setExercises] = useState([]);
+  const [mainLift, setMainLift] = useState("");
+  const [exercises, setExercises] = useState([]);
 
-    useEffect(() => {
-        if (day === "Upper Body") {
-          setUpperBody();
-        } else if (day === "Lower Body") {
-          setLowerBody();
-        }
-      }, [day]);
-
-    const setUpperBody = () =>{
-        setMainLift("Bench Press");
-        setExercises(Data.UpperBody);
+  useEffect(() => {
+    if (day === "Upper Body") {
+      setUpperBody();
+    } else if (day === "Lower Body") {
+      setLowerBody();
     }
+  }, [day]);
 
-    const setLowerBody = () => {
-        setMainLift("Squat");
-        setExercises(Data.LowerBody);
-    }
+  const setUpperBody = () => {
+    setMainLift("Bench Press");
+    setExercises(Data.UpperBody);
+  }
 
-      //Create copy of velocities array for readability.
+  const setLowerBody = () => {
+    setMainLift("Squat");
+    setExercises(Data.LowerBody);
+  }
+
+  //Create copy of velocities array for readability.
   const velocities = Data.Velocities;
 
   const getPhaseIndex = () => {

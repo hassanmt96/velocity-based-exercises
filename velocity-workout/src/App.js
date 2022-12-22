@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import { TextField, MenuItem } from "@mui/material";
 
@@ -10,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <h1>Velocity Based Strength Training</h1>
 
       {/* Create upper/lower body selection menu */}
