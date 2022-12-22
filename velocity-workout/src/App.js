@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>VBT PLANNER</h1>
+      <h1>Velocity Based Strength Training</h1>
 
       {/* Create upper/lower body selection menu */}
       <div style={{ margin: 10 }}>
